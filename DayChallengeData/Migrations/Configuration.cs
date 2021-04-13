@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DayChallengeData.DayChallengeDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DayChallengeData.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(DayChallengeData.DayChallengeDBContext context)
+        protected override void Seed(DayChallengeData.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
