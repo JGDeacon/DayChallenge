@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DayChallengeData
 {
-    public class Comment
+    public class Comment //Jeff
     {
         [Key]
         public int CommentID { get; set; }
