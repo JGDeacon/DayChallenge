@@ -9,6 +9,7 @@ namespace DayChallengeData
 {
     public class Reply
     {
+
         [Key]
         public int ReplyId { get; set; }
 
@@ -17,5 +18,6 @@ namespace DayChallengeData
 
         [Required]
         public Guid AuthorId { get; set; }
+
     }
 }
