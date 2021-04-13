@@ -14,9 +14,9 @@ namespace DayChallengeData
         public int CommentID { get; set; }
         public string Text { get; set; }
         public Guid AuthorID { get; set; }
-        public virtual List<Reply> Replies { get; set; }
+        //public virtual List<Reply> Replies { get; set; }
         //[ForeignKey(nameof(Reply))]
         public int PostID { get; set; } //Needs to be FK after first migration
-        public virtual Reply Reply { get; set; }
+        //public virtual Reply Reply { get; set; }
     }
 }
