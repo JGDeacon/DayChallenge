@@ -13,7 +13,7 @@ namespace DayChallengeData.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202104131510196_InitialMigration"; }
+            get { return "202104131710271_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source
