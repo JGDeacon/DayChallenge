@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DayChallengeData
 {
-    class Post
+    public class Post
     {
     }
 }

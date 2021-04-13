@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DayChallengeData
 {
-    class Comment
+    public class Comment
     {
     }
 }
