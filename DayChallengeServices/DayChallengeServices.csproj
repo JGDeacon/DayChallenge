@@ -63,12 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DayChallengeData\DayChallengeData.csproj">
+      <Project>{05D64DB1-5F71-4A3C-9CF7-A59E99E26D93}</Project>
+      <Name>DayChallengeData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DayChallengeModels\DayChallengeModels.csproj">
+      <Project>{EC45D796-1FBD-41C9-B85D-6EABADF09F6A}</Project>
+      <Name>DayChallengeModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
