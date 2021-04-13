@@ -13,14 +13,10 @@ namespace DayChallengeData
 
         [Key]
         public int ReplyId { get; set; }
-
         [Required]
         public string Text { get; set; }
-
         [Required]
-        public Guid AuthorId { get; set; }       
-        
-
+        public Guid AuthorId { get; set; }  
         [ForeignKey(nameof(Comment))]
         public int CommentID { get; set; }
         public virtual Comment Comment { get; set; }

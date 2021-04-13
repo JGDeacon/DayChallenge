@@ -77,7 +77,7 @@
       <Name>DayChallengeData</Name>
     </ProjectReference>
     <ProjectReference Include="..\DayChallengeModels\DayChallengeModels.csproj">
-      <Project>{EC45D796-1FBD-41C9-B85D-6EABADF09F6A}</Project>
+      <Project>{ec45d796-1fbd-41c9-b85d-6eabadf09f6a}</Project>
       <Name>DayChallengeModels</Name>
     </ProjectReference>
   </ItemGroup>

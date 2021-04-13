@@ -7,13 +7,13 @@ namespace DayChallengeData.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddKeys : IMigrationMetadata
+    public sealed partial class CommentKey : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddKeys));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CommentKey));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104132001406_AddKeys"; }
+            get { return "202104132000231_CommentKey"; }
         }
         
         string IMigrationMetadata.Source
