@@ -259,6 +259,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DayChallengeData\DayChallengeData.csproj">
+      <Project>{05d64db1-5f71-4a3c-9cf7-a59e99e26d93}</Project>
+      <Name>DayChallengeData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DayChallengeModels\DayChallengeModels.csproj">
+      <Project>{ec45d796-1fbd-41c9-b85d-6eabadf09f6a}</Project>
+      <Name>DayChallengeModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DayChallengeServices\DayChallengeServices.csproj">
+      <Project>{15ddaaee-225f-4b22-9f9c-e5e145752390}</Project>
+      <Name>DayChallengeServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
