@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DayChallengeData
 {
     public class Comment //Jeff
@@ -15,8 +14,8 @@ namespace DayChallengeData
         public string Text { get; set; }
         public Guid AuthorID { get; set; }
         //public virtual List<Reply> Replies { get; set; }
-        //[ForeignKey(nameof(Reply))]
+        [ForeignKey(nameof(Post))]
         public int PostID { get; set; } //Needs to be FK after first migration
-        //public virtual Reply Reply { get; set; }
+        public virtual Post Post { get; set; }
     }
 }
