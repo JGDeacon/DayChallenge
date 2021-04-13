@@ -22,7 +22,6 @@ namespace DayChallengeData
         //[ForeignKey(nameof(Comment))]
         //public int comentId { get; set; }
         //public virtual Comment Comment { get; set; }
-
     }
 }
 
