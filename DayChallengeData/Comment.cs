@@ -15,8 +15,11 @@ namespace DayChallengeData
         public string Text { get; set; }
         public Guid AuthorID { get; set; }
         //public virtual List<Reply> Replies { get; set; }
-        //[ForeignKey(nameof(Reply))]
-        public int PostID { get; set; } //Needs to be FK after first migration
-        //public virtual Reply Reply { get; set; }
+        [ForeignKey(nameof(Post))]
+        public int PostID { get; set; }
+
+        public virtual Post Post{ get; set; }//Needs to be FK after first migration
+                                               //public virtual Reply Reply { get; set; }
+    //This is only a test
     }
 }
