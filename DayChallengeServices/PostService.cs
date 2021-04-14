@@ -71,7 +71,7 @@ namespace DayChallengeServices
                         Id = entity.Id,
                         Title = entity.Title,
                         Text = entity.Text,
-                        Comment = entity.Comment
+                        //Comment = entity.Comment
                     };
             }
         }
