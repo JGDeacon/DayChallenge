@@ -17,13 +17,15 @@ namespace DayChallengeServices
         }
 
         //created the instance of a note
+        //Post Reply Using Foreign Key
         public bool CreateReply(ReplyCreate model)
         {
             var entity =
                 new Reply()
                 {
                     AuthorId = _userId,
-                    Text = model.Text
+                    Text = model.Text,
+                    CommentID = model.CommentID
                 };
 
             using(var ctx = new ApplicationDbContext())
@@ -33,8 +35,24 @@ namespace DayChallengeServices
             }
         }
 
-        //Post Reply Using Foreign Key
         //GetByCommentID
+        public ReplyDetail GetReplyById(int commentId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Replies
+                    .Single(e => e.ReplyId == commentId && e.AuthorId == _userId);
+                return
+                    new ReplyDetail
+                    {
+
+                        ReplyId = entity.ReplyId,
+                        Text = entity.Text
+                    };
+            }
+        }
 
     }
 }
