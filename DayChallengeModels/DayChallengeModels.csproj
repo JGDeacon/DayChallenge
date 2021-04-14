@@ -68,6 +68,7 @@
     <Compile Include="CommentModels\CommentUpdate.cs" />
     <Compile Include="PostCreate.cs" />
     <Compile Include="PostDetails.cs" />
+    <Compile Include="PostEdit.cs" />
     <Compile Include="PostListitems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplyCreate.cs" />
