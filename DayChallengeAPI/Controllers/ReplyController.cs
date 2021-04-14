@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DayChallengeModels;
+using DayChallengeServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +11,28 @@ namespace DayChallengeAPI.Controllers
 {
     public class ReplyController : ApiController
     {
+        public IHttpActionResult Get(int commentId)
+        {
+            ReplyService replyService = CreateReplyService();
+            var reply = replyService.GetReplyById(commentId);
+            return Ok(reply);
+        }
+        public IHttpActionResult Post(ReplyCreate reply)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateReplyService();
+            if (!service.CreateReply(reply))
+                return InternalServerError();
+            return Ok();
+        }
+        private ReplyService CreateReplyService()
+        {
+            //not sure if line 16 is right
+            var userId = Guid.Parse(User.Identity.Name);
+            var replyService = new ReplyService(userId);
+            return replyService;
+        }
         
     }
 }
