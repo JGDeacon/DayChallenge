@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DayChallengeModels
 {
-    class ReplyListItem
+
+    public class ReplyListItem
     {
-    }
+        public int ReplyId { get; set; }
+        public string Text { get; set; }
+        public int CommentID { get; set; }
 }
