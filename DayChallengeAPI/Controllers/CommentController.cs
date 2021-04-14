@@ -32,10 +32,19 @@ namespace DayChallengeAPI.Controllers
                 return InternalServerError();
             }
             return Ok("Comment Added");
-
         }
-
-
+        public IHttpActionResult Get()
+        {
+            CommentService commentService = CreateCommentService();
+            var comments = commentService.GetComments();
+            return Ok(comments);
+        }
+        public IHttpActionResult Get(int id)
+        {
+            CommentService commentService = CreateCommentService();
+            var comments = commentService.GetCommentByID(id);
+            return Ok(comments);
+        }
 
 
     }
