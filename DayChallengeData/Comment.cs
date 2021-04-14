@@ -11,11 +11,12 @@ namespace DayChallengeData
     {
         [Key]
         public int CommentID { get; set; }
+        [Required]
         public string Text { get; set; }
+        [Required]
         public Guid AuthorID { get; set; }
-        //public virtual List<Reply> Replies { get; set; }
         [ForeignKey(nameof(Post))]
-        public int PostID { get; set; } //Needs to be FK after first migration
+        public int Id { get; set; }         
         public virtual Post Post { get; set; }
     }
 }

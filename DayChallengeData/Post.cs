@@ -20,7 +20,7 @@ namespace DayChallengeData
         [Required]
         public Guid AuthorId { get; set; }
 
-        public virtual Comment Comment { get; set; }
+        
     }
 }
 

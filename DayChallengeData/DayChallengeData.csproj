@@ -70,9 +70,9 @@
     <Compile Include="Migrations\202104131710271_InitialMigration.designer.cs">
       <DependentUpon>202104131710271_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104132001406_AddKeys.cs" />
-    <Compile Include="Migrations\202104132001406_AddKeys.designer.cs">
-      <DependentUpon>202104132001406_AddKeys.cs</DependentUpon>
+    <Compile Include="Migrations\202104132209106_FKAdd.cs" />
+    <Compile Include="Migrations\202104132209106_FKAdd.designer.cs">
+      <DependentUpon>202104132209106_FKAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -87,8 +87,8 @@
     <EmbeddedResource Include="Migrations\202104131710271_InitialMigration.resx">
       <DependentUpon>202104131710271_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104132001406_AddKeys.resx">
-      <DependentUpon>202104132001406_AddKeys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104132209106_FKAdd.resx">
+      <DependentUpon>202104132209106_FKAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
