@@ -1,6 +1,8 @@
+
 ﻿using DayChallengeModels;
 using DayChallengeServices;
 using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -33,6 +35,6 @@ namespace DayChallengeAPI.Controllers
             var replyService = new ReplyService(userId);
             return replyService;
         }
-        
+      
     }
 }
