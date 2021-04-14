@@ -33,7 +33,7 @@ namespace DayChallengeServices
         }
         public IEnumerable<CommentDetails> GetComments()
         {
-            using (var ctx = new ApplicationDbContext()) //Couldn't this be a private readonly scoped to the entire class?
+            using (var ctx = new ApplicationDbContext()) 
             {
                 var query = ctx.Comments.Where(e => e.CommentID >= 1).Select(e => new CommentDetails
                 {
@@ -41,7 +41,7 @@ namespace DayChallengeServices
                     Text = e.Text,
                     AuthorID = e.AuthorID,
                     PostID = e.Id,
-                    Replies = ctx.Replies.Where(z => z.CommentID == e.CommentID).Select(z => new Reply { ReplyId = z.ReplyId, Text = z.Text, AuthorId = z.AuthorId }).ToList()
+                    //Replies = ctx.Replies.Where(z => z.CommentID == e.CommentID).Select(z => new Reply { ReplyId = z.ReplyId, Text = z.Text, AuthorId = z.AuthorId }).ToList()
                 });
 
                 return query.ToArray();
@@ -58,7 +58,7 @@ namespace DayChallengeServices
                     Text = entity.Text,
                     AuthorID = entity.AuthorID,
                     PostID = entity.Id,
-                    Replies = ctx.Replies.Where(z => z.CommentID == entity.CommentID).Select(z => new Reply { ReplyId = z.ReplyId, Text = z.Text, AuthorId = z.AuthorId }).ToList()
+                    //Replies = ctx.Replies.Where(z => z.CommentID == entity.CommentID).Select(z => new Reply { ReplyId = z.ReplyId, Text = z.Text, AuthorId = z.AuthorId }).ToList()
                 };
             }
         }

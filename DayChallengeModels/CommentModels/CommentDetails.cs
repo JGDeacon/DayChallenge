@@ -16,6 +16,6 @@ namespace DayChallengeModels.CommentModels
         public Guid AuthorID { get; set; }
 
         public int PostID { get; set; }
-        public List<Reply> Replies { get; set; } = new List<Reply>();
+        public List<Reply> Replies { get; set; }
     }
 }

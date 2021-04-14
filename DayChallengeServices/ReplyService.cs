@@ -49,7 +49,8 @@ namespace DayChallengeServices
                     {
 
                         ReplyId = entity.ReplyId,
-                        Text = entity.Text
+                        Text = entity.Text,
+                        CommentID = entity.CommentID
                     };
             }
         }

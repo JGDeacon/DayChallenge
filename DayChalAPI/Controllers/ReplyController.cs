@@ -1,5 +1,6 @@
 ﻿using DayChallengeModels;
 using DayChallengeServices;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace DayChallengeAPI.Controllers
         private ReplyService CreateReplyService()
         {
             //not sure if line 16 is right
-            var userId = Guid.Parse(User.Identity.Name);
+            var userId = Guid.Parse(User.Identity.GetUserId());
             var replyService = new ReplyService(userId);
             return replyService;
         }
