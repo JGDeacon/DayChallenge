@@ -12,4 +12,5 @@ namespace DayChallengeModels
         public int ReplyId { get; set; }
         public string Text { get; set; }
         public int CommentID { get; set; }
+    }
 }
